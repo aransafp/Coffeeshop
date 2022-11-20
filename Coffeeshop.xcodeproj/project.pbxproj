@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		66D7D4D8292A6839008F6F8F /* CoffeeshopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D7D4D7292A6839008F6F8F /* CoffeeshopApp.swift */; };
-		66D7D4DA292A6839008F6F8F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D7D4D9292A6839008F6F8F /* ContentView.swift */; };
 		66D7D4DC292A683B008F6F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D7D4DB292A683B008F6F8F /* Assets.xcassets */; };
 		66D7D4DF292A683B008F6F8F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D7D4DE292A683B008F6F8F /* Preview Assets.xcassets */; };
 		66D7D4E7292A6C65008F6F8F /* CoffeeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D7D4E6292A6C65008F6F8F /* CoffeeListView.swift */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		66D7D4D4292A6839008F6F8F /* Coffeeshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coffeeshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D7D4D7292A6839008F6F8F /* CoffeeshopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeshopApp.swift; sourceTree = "<group>"; };
-		66D7D4D9292A6839008F6F8F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		66D7D4DB292A683B008F6F8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66D7D4DE292A683B008F6F8F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		66D7D4E6292A6C65008F6F8F /* CoffeeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeListView.swift; sourceTree = "<group>"; };
@@ -58,7 +56,6 @@
 				66D7D4E8292A6C73008F6F8F /* Model */,
 				66D7D4E5292A6C49008F6F8F /* View */,
 				66D7D4D7292A6839008F6F8F /* CoffeeshopApp.swift */,
-				66D7D4D9292A6839008F6F8F /* ContentView.swift */,
 				66D7D4DB292A683B008F6F8F /* Assets.xcassets */,
 				66D7D4DD292A683B008F6F8F /* Preview Content */,
 			);
@@ -161,7 +158,6 @@
 			files = (
 				66D7D4E7292A6C65008F6F8F /* CoffeeListView.swift in Sources */,
 				66D7D4EA292A6CAB008F6F8F /* CoffeeShop.swift in Sources */,
-				66D7D4DA292A6839008F6F8F /* ContentView.swift in Sources */,
 				66D7D4D8292A6839008F6F8F /* CoffeeshopApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
