@@ -37,7 +37,14 @@ struct CoffeeListView: View {
     var body: some View {
         NavigationStack {
             List(coffeeShopResults) { coffeeShop in
-                Text("\(coffeeShop.name)")
+                NavigationLink(
+                    destination: {
+                        CoffeeShopDetailView(coffeeShop: coffeeShop)
+                    },
+                    label: {
+                        Text("\(coffeeShop.name)")
+                    }
+                )
             }
             .navigationTitle("Coffeeshop")
             .searchable(
