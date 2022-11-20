@@ -33,9 +33,10 @@ struct CoffeeShopDetailView: View {
                         VStack {
                             Image(systemName: "person.crop.circle.fill.badge.plus")
                                 .resizable()
-                                .scaledToFit()
+                                .renderingMode(.original)
                                 .foregroundColor(.blue)
-                                .frame(width: 60)
+                                .scaledToFit()
+                                .frame(width: 50)
                             
                             Text(coffeeShop.name)
                                 .font(.system(.title, design: .rounded))
