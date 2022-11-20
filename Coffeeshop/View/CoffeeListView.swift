@@ -25,6 +25,14 @@ struct CoffeeListView: View {
         return filteredCoffeeShopResults
     }
     
+    private var suggestedCoffeeShop: [Coffeeshop] {
+        if searchText.isEmpty {
+            return []
+        }
+        
+        return coffeeShopResults
+    }
+    
     // MARK: VIEWS
     var body: some View {
         NavigationStack {
@@ -36,7 +44,13 @@ struct CoffeeListView: View {
                 text: $searchText,
                 placement: .navigationBarDrawer(displayMode: .always),
                 prompt: "Search coffee shop"
-            )
+            ) {
+                ForEach(suggestedCoffeeShop) { coffeeShop in
+                    Text("Looking for \(coffeeShop.name)?")
+                        .foregroundColor(.blue)
+                        .searchCompletion(coffeeShop.name)
+                }
+            }
         }
     }
 }
