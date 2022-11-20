@@ -42,10 +42,32 @@ struct CoffeeListView: View {
                         CoffeeShopDetailView(coffeeShop: coffeeShop)
                     },
                     label: {
-                        Text("\(coffeeShop.name)")
+                        HStack(alignment: .top) {
+                            Image(coffeeShop.image)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 150)
+                                .cornerRadius(20)
+                                .padding(.trailing)
+                            
+                            VStack(alignment: .leading, spacing: 15) {
+                                Text("\(coffeeShop.name)")
+                                    .font(.system(.title, design: .rounded))
+                                    .fontWeight(.bold)
+                                
+                                Text(coffeeShop.location)
+                                    .font(.system(size: 18 , design: .rounded))
+                                    .foregroundColor(.gray)
+                                    .fontWeight(.bold)
+                                
+                                Text("Rating: 4/5")
+                                    .foregroundColor(.gray)
+                            }
+                        }
                     }
                 )
             }
+            .listStyle(.inset)
             .navigationTitle("Coffeeshop")
             .searchable(
                 text: $searchText,
