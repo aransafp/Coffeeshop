@@ -14,7 +14,15 @@ struct ContentView: View {
     private var coffeeShopResults: [Coffeeshop] {
         let results = CoffeeshopProvider.all()
         
-        return results
+        if searchText.isEmpty {
+            return results
+        }
+        
+        var filteredCoffeeShopResults: [Coffeeshop] = results.filter {
+            result in result.name.lowercased().contains(searchText.lowercased())
+        }
+        
+        return filteredCoffeeShopResults
     }
     
     // MARK: VIEWS
@@ -24,7 +32,11 @@ struct ContentView: View {
                 Text("\(coffeeShop.name)")
             }
             .navigationTitle("Coffeeshop")
-            .searchable(text: $searchText)
+            .searchable(
+                text: $searchText,
+                placement: .navigationBarDrawer(displayMode: .always),
+                prompt: "Search coffee shop"
+            )
         }
     }
 }
