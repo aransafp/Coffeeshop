@@ -8,17 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    // MARK: PROPERTIES
+    @State private var searchText: String = ""
+    
+    private var coffeeShopResults: [Coffeeshop] {
+        let results = CoffeeshopProvider.all()
+        
+        return results
+    }
+    
+    // MARK: VIEWS
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            List(coffeeShopResults) { coffeeShop in
+                Text("\(coffeeShop.name)")
+            }
+            .navigationTitle("Coffeeshop")
+            .searchable(text: $searchText)
         }
-        .padding()
     }
 }
 
+// MARK: PREVIEW
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
